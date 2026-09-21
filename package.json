@@ -1,0 +1,23 @@
+{
+  "name": "roadmap-javascript",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Step-by-step JavaScript roadmap: 28 runnable lessons + a roadmap overview.",
+  "main": "0_overview.js",
+  "scripts": {
+    "start": "node 0_overview.js",
+    "all": "node run-all.js",
+    "lesson": "node"
+  },
+  "keywords": [
+    "javascript",
+    "roadmap",
+    "learning",
+    "node",
+    "tutorial"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

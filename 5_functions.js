@@ -1,3 +1,26 @@
+/**
+ * ============================================================================
+ * STEP 05 / 28  ·  FUNCTIONS                       Phase 1 · JavaScript Basics
+ * ============================================================================
+ *
+ * WHAT YOU WILL LEARN
+ *   1. What a function is and why we use them
+ *   2. Function declaration / expression / arrow / anonymous / IIFE
+ *   3. Parameters vs arguments, return values, default parameters, rest params
+ *   4. Closures and higher-order functions in practice
+ *   5. The `this` rules inside functions, plus interview classics and mistakes
+ *
+ * HOW THIS FILE IS ORGANISED
+ *   This is the deep-dive step: 13 numbered sections, each following
+ *   Definition -> Example -> Output. The expected results are written inline as
+ *   "// Output: ..." comments right next to the code that produces them.
+ *
+ * RUN IT      node 5_functions.js
+ * PREV STEP   <-  4_control_flow.js
+ * NEXT STEP   ->  6_arrays.js
+ * ============================================================================
+ */
+
 // # JavaScript Functions: A Deep Dive
 
 // ## ✅ 1. **What is a Function?**
@@ -47,6 +70,7 @@ console.log(doubledNumbers); // Output: [2, 4, 6]
 
 // ### e. **Immediately Invoked Function Expression (IIFE)**
 // Executed right after definition, creates a private scope.
+// (Full IIFE lesson with the module/singleton patterns: 29_iife_and_module_patterns.js)
 // Example:
 (function() {
   const secret = "IIFE secret";
@@ -244,15 +268,24 @@ const myObject = {
 
 
 // ## ✅ 13. **Real-World Example: Event Handler**
-// // ```html
-// // <!-- <button id="myButton">Click Me</button>
-// // <script>
-// //   function handleButtonClick() {
-// //     alert("Button was clicked!");
-// //   }
-// //   const button = document.getElementById("myButton");
-// //   if (button) { // Check if button exists
-// //       button.addEventListener("click", handleButtonClick);
-// //   }
-// // </script> -->
-// // ```
+// ```html
+// <button id="myButton">Click Me</button>
+// <script>
+//   function handleButtonClick() {
+//     alert("Button was clicked!");
+//   }
+//   const button = document.getElementById("myButton");
+//   if (button) {                       // always check the element exists
+//     button.addEventListener("click", handleButtonClick);
+//   }
+// </script>
+// ```
+// The shorter modern version (optional chaining + arrow function):
+//   document.querySelector("#myButton")?.addEventListener("click", () => alert("Clicked"));
+
+// ---------------------------------------------------------------------------
+// ✅ STEP 05 COMPLETE
+//    Practise: write add(), isEven(), formatName() as a declaration, an
+//    expression and an arrow function - notice what changes (hoisting, `this`).
+//    NEXT -> node 6_arrays.js   (Phase 2 · Working with Data)
+// ---------------------------------------------------------------------------
